@@ -9,7 +9,7 @@ class Person
   end
 
   def get_attributes
-    attributes = { age: @age, name: @name, last_name: @last_name, gender: @gender }
+    { age: @age, name: @name, last_name: @last_name, gender: @gender }
   end
 end
 
