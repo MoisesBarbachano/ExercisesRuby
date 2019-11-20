@@ -6,19 +6,21 @@ class Dictionary
     rent: 'renta'
   }
 
-  def self.translate(idiom, word)
-    word = word.downcase
-    idiom = idiom.downcase
-    @words.each do |english_word, spanish_word|
-      case idiom
-        when 'english'
-          break english_word if spanish_word.to_s == word.to_s
-        when 'spanish'
-          break spanish_word if english_word.to_s == word.to_s
-        end
+  def self.translate(language, word)
+    word = word.downcase.to_s
+    language = language.downcase
+
+    case language
+    when 'english'
+      @words.key(word)
+    when 'spanish'
+      @words[word.to_sym]
+    else
+      "The language #{language} is not found"
     end
   end
 end
 
 Dictionary.translate('english', 'Inquilino')
 Dictionary.translate('Spanish', 'Tenant')
+Dictionary.translate('Arabic', 'Tenant')
