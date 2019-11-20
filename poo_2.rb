@@ -8,16 +8,21 @@ class Person
     @gender = gender
   end
 
-  def get_attributes
-    { age: @age, name: @name, last_name: @last_name, gender: @gender }
+  def attributes
+    {
+      age: @age,
+      name: @name,
+      last_name: @last_name,
+      gender: @gender
+    }
   end
 end
 
 class Contact
   @contacts = []
-  @contacts << Person.new(20, 'Jose', 'Lopez', :male).get_attributes
-  @contacts << Person.new(21, 'Oscar', 'Perez', :male).get_attributes
-  @contacts << Person.new(22, 'Martha', 'Sanchez', :female).get_attributes
+  @contacts << Person.new(20, 'Jose', 'Lopez', :male).attributes
+  @contacts << Person.new(21, 'Oscar', 'Perez', :male).attributes
+  @contacts << Person.new(22, 'Martha', 'Sanchez', :female).attributes
 
   def self.all
     @contacts
