@@ -3,7 +3,7 @@ class Dictionary
              tenant: 'inquilino',
              owner: 'propietario',
              rent: 'renta'
-  }
+            }
 
   def self.translate(idiom, word)
     @words.each do |english_word, spanish_word|
