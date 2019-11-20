@@ -8,33 +8,27 @@ class Car
   end
 
   def start
-    begin
-      raise 'Car already started' if @started
+    raise 'Car already started' if @started
 
-      @started = true
-    end
+    @started = true
 
     'Car started'
   end
 
   def start_trip
-    begin
-      raise 'Car is not started' unless @started
-      raise 'Trip is already started' if @trip_state == :started
+    raise 'Car is not started' unless @started
+    raise 'Trip is already started' if @trip_state == :started
 
-      @trip_state = :started
-    end
+    @trip_state = :started
 
     'The trip has begun'
   end
 
   def finish_trip
-    begin
-      raise 'Car is not started' unless @started
-      raise 'Trip is not started' if @trip_state == :not_started
+    raise 'Car is not started' unless @started
+    raise 'Trip is not started' if @trip_state == :not_started
 
-      @trip_state = :not_started
-    end
+    @trip_state = :not_started
 
     'The trip has finished'
   end
