@@ -20,5 +20,5 @@ class Dictionary
   end
 end
 
-puts Dictionary.translate('english', 'Inquilino')
-puts Dictionary.translate('Spanish', 'Tenant')
+Dictionary.translate('english', 'Inquilino')
+Dictionary.translate('Spanish', 'Tenant')
