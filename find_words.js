@@ -2,7 +2,7 @@ const peopleNames = ["Pedro", "Maria", "Rosa"];
 const animals = ["Caballo", "Oso", "Perro"];
 const things = ["Petroleo", "Carne", "Rosca"];
 
-const matchCoincidences = (term) => {
+const matchTerms = (term) => {
   let words = [];
   let allWords = peopleNames.concat(animals, things);
 
@@ -13,4 +13,4 @@ const matchCoincidences = (term) => {
   return words;
 }
 
-find_coincidences("ros");
+matchTerms("ros");
