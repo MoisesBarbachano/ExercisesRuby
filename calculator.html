@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <input id="first-number" type="number">
+  <input id="second-number" type="number">
+
+  <button onclick="sum()">Sum</button>
+  <button onclick="subtraction()">Subtraction</button>
+  <button onclick="multiplication()">Multiplication</button>
+  <button onclick="division()">Division</button>
+
+  <p id="result-operation"></p>
+
+  <script>
+    const firstNumber = document.getElementById('first-number');
+    const secondNumber = document.getElementById('second-number');
+    const resultOperation = document.getElementById('result-operation');
+    let values = {};
+    let resultNumber = 0;
+    
+    const inputValues = () => {
+      values.firstNumber = parseInt(firstNumber.value);
+      values.secondNumber = parseInt(secondNumber.value);
+    }
+  
+    const checkInvalidNumber = (number) => {
+      return number = (isNaN(number)) ? "Enter valid values" : number
+    } 
+  
+    const sum = () => {
+      inputValues();
+      resultNumber = values.firstNumber + values.secondNumber;
+      resultOperation.innerHTML = checkInvalidNumber(resultNumber);
+    }
+  
+    const subtraction = () => {
+      inputValues();
+      resultNumber = values.firstNumber - values.secondNumber;
+      resultOperation.innerHTML = checkInvalidNumber(resultNumber);
+    }
+  
+    const multiplication = () => {
+      inputValues();
+      resultNumber = values.firstNumber * values.secondNumber;
+      resultOperation.innerHTML = checkInvalidNumber(resultNumber);
+    }
+  
+    const division = () => {
+      inputValues();
+      resultNumber = values.firstNumber / values.secondNumber;
+      resultOperation.innerHTML = checkInvalidNumber(resultNumber);
+    }
+  </script>
+</body>
+</html>
