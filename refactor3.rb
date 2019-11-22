@@ -10,9 +10,9 @@ def assets(data)
 end 
 
 def attributes_app_model(data)
-  return data[app_model] if data[app_model][id]
-    
   data_app_model = data
+  return data_app_model[app_model] if data_app_model[app_model][id]
+    
   data_app_model[app_model] = {} unless data_app_model[app_model]
   local_attributes = attributes_with_association_ids
   local_attributes['object'] = ObjectLookup.by_id(local_attributes['activity_stream_object_id'])
