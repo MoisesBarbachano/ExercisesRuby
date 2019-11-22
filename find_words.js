@@ -4,13 +4,12 @@ const things = ["Petroleo", "Carne", "Rosca"];
 
 const matchTerms = (term) => {
   let words = [];
-  let allWords = peopleNames.concat(animals, things);
+  const allWords = peopleNames.concat(animals, things);
 
-  allWords = allWords.map(word => word.toLowerCase());
   partLowerCase = term.toLowerCase();
-  words = allWords.filter(word => word.includes(partLowerCase));
+  words = allWords.filter(word => word.toLowerCase().includes(partLowerCase));
 
   return words;
 }
 
-matchTerms("ros");
+matchTerms("Pe");
