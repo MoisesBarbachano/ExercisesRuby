@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movies</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Year</th>
+          <th>Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Example Movie 1 -->
+          <td id="js-movie-name"></td>
+          <td id="js-movie-year"></td>
+          <td id="js-movie-actors"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script type="text/javascript">
+    const type = "jim";
+    const queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&apikey=40e9cece";
+    const movieName = document.getElementById('js-movie-name');
+    const movieYear = document.getElementById('js-movie-year');
+    const movieActors = document.getElementById('js-movie-actors');
+
+    const setDataTable = (data) => {
+      movieName.innerHTML = data.Title;
+      movieYear.innerHTML = data.Year;
+      movieActors.innerHTML = data.Actors;
+    }
+
+    const getInfoMovie = (url) => {
+      axios.get(url)
+      .then(function (response) {
+        if (response.status == 200) { 
+          setDataTable(response.data);
+        }
+      })
+      .catch(function (error) {
+        console.log(`Error: $(error)`);
+      });
+    }
+
+    getInfoMovie(queryURL);
+  </script>
+</body>
+</html>
