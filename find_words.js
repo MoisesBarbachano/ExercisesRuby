@@ -2,7 +2,7 @@ const peopleNames = ["Pedro", "Maria", "Rosa"];
 const animals = ["Caballo", "Oso", "Perro"];
 const things = ["Petroleo", "Carne", "Rosca"];
 
-const matchTerms = (term) => {
+const findWords = (term) => {
   let words = [];
   const allWords = peopleNames.concat(animals, things);
 
@@ -12,4 +12,4 @@ const matchTerms = (term) => {
   return words;
 }
 
-matchTerms("Pe");
+findWords("Pe");
