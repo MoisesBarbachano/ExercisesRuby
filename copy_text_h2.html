@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input to H2</title>
+</head>
+<body>
+  <h2 id="title"></h2>
+  <input id="data" type="text">
+  <button onclick="setDataTitle()">Set value in the title</button>
+</body>
+</html>
+
+<script>
+  const setDataTitle = () => {
+    const dataIntroduced = document.getElementById('data').value;
+    document.getElementById('title').innerHTML = dataIntroduced;
+  }
+</script>
