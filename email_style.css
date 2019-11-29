@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Avenir-next;
+  src: url("fonts/avenir next sv/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+body {
+  max-height: 100%;
+  font-family: Avenir-next;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+#logo-homie {
+  margin: 1% 0px;
+}
+#welcome-client {
+  color: #666666;
+  font-size: 20px;
+}
+#text-info {
+  text-align: center;
+  color: #434343;
+}
+#text-info-spaces {
+  color: #8D7AFF;
+  cursor: pointer;
+}
+#continue-register {
+  font-size: 16px;
+  color: #8D7AFF;
+  background: white;
+  padding: 6px 80px;
+  border: 2px solid #8D7AFF;
+  text-decoration: none;
+}
+#images-benefits {
+  justify-content: space-around;
+}
+#images-benefits > .benefits {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #434343;
+  font-size: 16px;
+}
+.benefits > .image-benefit {
+  margin: auto;
+  max-width: 50%;
+}
+#rent-homie {
+  color: #666666;
+}
+@media(max-width: 600px){
+  #images-benefits{
+    flex-direction: column;
+  }
+}
