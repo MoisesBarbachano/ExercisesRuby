@@ -1,0 +1,68 @@
+body {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+#title-department {
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+.flex-container > #image-container {
+  flex-basis: 55%;
+  overflow: hidden;
+  height: 332px;
+  border-radius: 5px 0px 0px 5px;
+}
+.flex-container > #info-container {
+  flex-basis: 22%;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#image-department {
+  margin-top: -480px;
+  width: 100%;
+}
+#info-container {
+  overflow: hidden;
+  height: 290px;
+}
+.space-information {
+  padding-left: 25px;
+  padding-right: 60px;
+}
+#since-department {
+  font-size: 10px;
+  color: #999;
+}
+#price-department {
+  font-size: 20px;
+}
+#address-department {
+  color: #2a63cb;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 48px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#location-department {
+  font-size: 14px;
+  color: #999;
+  margin-top: 0px;
+}
+#info-department {
+  color: #999;
+  font-size: 15px;
+  max-height: 32%;
+  overflow: hidden;
+  margin-top: 25px;
+}
