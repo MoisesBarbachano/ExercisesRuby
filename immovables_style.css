@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.flex-container-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+#image-principal {
+  background-image: url('images/principal_image_responsive.jpg');
+  background-size: cover;
+}
+#login-container {
+  flex-direction: row;
+  justify-content: flex-end;
+  color: white;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+#login-container > span {
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid white;
+}
+#login-container > span:first-child {
+  font-weight: bolder;
+}
+#register-text { 
+  color: white; 
+  font-size: 20px;
+  margin-top: 40px;
+  padding: 0px 20px;
+  text-align: center;
+}
+#location-input {
+  width: 70%;
+  padding: 10px;
+  background: white;
+  border: 2px solid white;
+}
+#location-search {
+  color: white;
+  padding: 0px 18px; 
+  background: rgb(90, 132, 238);
+  border: 0px solid rgb(90, 132, 238);
+}
+#terms-conditions {
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+#title-options {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0px 40px;
+  margin-bottom: 0px;
+}
+#images-options {
+  min-height: 40vh;
+  justify-content: center;
+}
+#images-options > .options {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.options > .image-option {
+  margin: auto;
+  max-width: 40%;
+}
+.options > h3 {
+  font-size: 16px;
+  margin: 2px 0px;
+}
+.options > p {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 0px 10px;
+}
+#zone-container {
+  background: #DCDCDC;
+}
+#zone-container > h2 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+#zone-container > p {
+  font-size: 20px;
+  margin-top: 0px;
+  padding: 0px 10px;
+}
+.zone-text {
+  text-align: center;
+}
+.zone-text:nth-child(2) {
+  color: gray;
+} 
+#zone-button {
+  color: white;
+  font-size: 14px;
+  padding: 12px;
+  margin: 0px 10px;
+  background: rgb(90, 132, 238);
+  border: 0px solid black;
+}
+#zone-image {
+  max-width: 70%;
+  margin: auto;
+  margin: 20px auto 0px auto;
+}
+footer {
+  height: 30px;
+  background: black;
+}
+@media(min-width: 663px) {
+  #register-text {
+    font-size: 30px;
+    margin: 4% 120px;
+  }
+  #image-principal {
+    height: 50vh;
+    background: url('images/principal_image.jpg') no-repeat center center fixed;
+    background-size: cover !important;
+    background-position-y: -300px;
+  }
+  .options > .image-option {
+    width: 14vw;
+    height: 14vw;
+    max-width: none;
+  }
+  #location-input {
+    width: 40%;
+  }
+  .location-options {
+    display: inline;
+    background: white;
+    border: 0px solid gray;
+    width: 12%;
+    min-width: 110px;
+    color: gray;
+  }
+  #location-checkbox > input {
+    margin-top: 12px;
+  }
+  #location-checkbox > span {
+    font-size: 14px;
+  }
+  .location-selects {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA3klEQVRIS+3VMU9CMRTF8d8zBL+aizoQFhx0kUk33RzdYMNFXUFnYeGrYYyaJiUxJHDLSxodbNKpfeffc9/pbaPyaCrr+3OA++z4rtT5Pg5GuMnCY9yWQEoBE1xhlUUP8YDrCBIB0vojLvGO0yz4hm4JJAKcYYoPHGOZAUdYoIMBXrc5iQAHeMlzviFygj7O8dkWEJU4XI8chALRhn9AVKHf70VRTHu4wFfbmKZLNKt50dLBnna0imcMd/2I0phWa3Y/D1e1Xa9BCZJG0VuQNpaWKMx72xS1Fl5/WN3BN+AgJhnZQlq4AAAAAElFTkSuQmCC');
+    background-position: calc(100% - .5rem), 100% 0;
+    background-size: 1.5em 1.1em;
+    background-repeat: no-repeat;
+  }
+  #images-options {
+    display: flex;
+    flex-direction: row;
+  }
+  #login-container {
+    margin-right: 50px;
+  }
+  .options {
+    width: 25%;
+  }
+  .options > .image-option {
+    margin: 20px auto;
+  }
+  .image-option {
+    height: 50%;
+  }
+  #zone-container {
+    justify-content: center;
+  }
+  .zone-text {
+    margin: 10px 32%;
+  }
+  #zone-button {
+    margin: 0px 38%;
+  }
+  #zone-image {
+    max-width: 40%;
+  }
+}
