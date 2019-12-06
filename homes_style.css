@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
 }
-#image-principal {
+#main-image {
   background-image: url('images/principal_image_responsive.jpg');
   background-size: cover;
 }
@@ -43,27 +43,29 @@ body {
 #location-input {
   width: 70%;
   padding: 10px;
+  margin-top: 15px;
   background: white;
   border: 2px solid white;
 }
 #location-search {
   color: white;
-  padding: 0px 18px; 
+  padding: 0px 18px;
+  margin-top: 15px; 
   background: rgb(90, 132, 238);
   border: 0px solid rgb(90, 132, 238);
 }
 #terms-conditions {
   color: white;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   text-decoration: underline;
 }
 #title-options {
   font-size: 16px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 0px 40px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 #images-options {
   min-height: 40vh;
@@ -89,7 +91,7 @@ body {
   padding: 0px 10px;
 }
 #zone-container {
-  background: #DCDCDC;
+  background: whitesmoke;
 }
 #zone-container > h2 {
   font-size: 24px;
@@ -102,24 +104,26 @@ body {
 }
 .zone-text {
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 12px;
 }
 .zone-text:nth-child(2) {
   color: gray;
 } 
 #zone-button {
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   padding: 12px;
   margin: 0px 10px;
   background: rgb(90, 132, 238);
   border: 0px solid black;
 }
 #zone-image {
-  max-width: 70%;
+  max-width: 62%;
   margin: auto;
   margin: 20px auto 0px auto;
 }
-footer {
+.black-container {
   height: 30px;
   background: black;
 }
@@ -127,16 +131,21 @@ footer {
   #register-text {
     font-size: 30px;
     margin: 4% 120px;
+    margin-top: 3%;
+    margin-bottom: 70px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 80px;
   }
-  #image-principal {
-    height: 50vh;
+  #main-image {
+    height: 80vh;
     background: url('images/principal_image.jpg') no-repeat center center fixed;
     background-size: cover !important;
-    background-position-y: -300px;
+    background-position-y: -160px;
   }
   .options > .image-option {
-    width: 14vw;
-    height: 14vw;
+    width: 16vw;
+    height: 16vw;
     max-width: none;
   }
   #location-input {
@@ -150,32 +159,45 @@ footer {
     min-width: 110px;
     color: gray;
   }
+  #location-checkbox {
+    margin-top: 15px;
+  }
   #location-checkbox > input {
     margin-top: 12px;
   }
   #location-checkbox > span {
     font-size: 14px;
   }
+  #select-modality {
+    margin-top: 15px;
+  }
+  #select-type {
+    margin-top: 15px;
+  }
   .location-selects {
     -webkit-appearance: none;
     appearance: none;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA3klEQVRIS+3VMU9CMRTF8d8zBL+aizoQFhx0kUk33RzdYMNFXUFnYeGrYYyaJiUxJHDLSxodbNKpfeffc9/pbaPyaCrr+3OA++z4rtT5Pg5GuMnCY9yWQEoBE1xhlUUP8YDrCBIB0vojLvGO0yz4hm4JJAKcYYoPHGOZAUdYoIMBXrc5iQAHeMlzviFygj7O8dkWEJU4XI8chALRhn9AVKHf70VRTHu4wFfbmKZLNKt50dLBnna0imcMd/2I0phWa3Y/D1e1Xa9BCZJG0VuQNpaWKMx72xS1Fl5/WN3BN+AgJhnZQlq4AAAAAElFTkSuQmCC');
+    background-image: url('images/arrows_select.png');
     background-position: calc(100% - .5rem), 100% 0;
-    background-size: 1.5em 1.1em;
+    background-size: .9em .8em;
     background-repeat: no-repeat;
+  }
+  #title-options {
+    margin-bottom: 30px;
   }
   #images-options {
     display: flex;
     flex-direction: row;
   }
   #login-container {
+    margin-top: -80px;
     margin-right: 50px;
   }
   .options {
     width: 25%;
   }
   .options > .image-option {
-    margin: 20px auto;
+    margin: 10px auto;
   }
   .image-option {
     height: 50%;
@@ -188,6 +210,8 @@ footer {
   }
   #zone-button {
     margin: 0px 38%;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }
   #zone-image {
     max-width: 40%;

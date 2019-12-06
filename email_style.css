@@ -17,7 +17,10 @@ body {
   width: 100%;
 }
 #logo-homie {
-  margin: 1% 0px;
+  /*margin: 1% 0px;*/
+  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 #welcome-client {
   color: #666666;
@@ -29,7 +32,7 @@ body {
 #text-info {
   text-align: center;
   color: #434343;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 #text-info-spaces {
   color: #8D7AFF;
@@ -44,7 +47,7 @@ body {
   padding: 10px 80px;
   border: 2px solid #8D7AFF;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 #images-benefits {
   justify-content: space-around;
@@ -60,8 +63,12 @@ body {
   margin: auto;
   max-width: 70%;
 }
+.benefits > p {
+  margin-top: 35px;
+}
 #rent-homie {
   color: #666666;
+  margin-bottom: 35px;
 }
 @media(max-width: 600px){
   #images-benefits{
