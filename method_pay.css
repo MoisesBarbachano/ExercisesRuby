@@ -1,0 +1,170 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.principal-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+.choose-pay {
+  font-size: 18px;
+  color: rgb(74, 74, 74);
+}
+.card-container {
+  min-width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.card-pay {
+  display: flex;
+  max-width: 800px;
+  padding-left: 5px;
+}
+.type-pay {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+.images-pay-container {
+  text-align: center;
+}
+.image-pay {
+  cursor: pointer;
+  width: 60px;
+  border: 2px solid gray;
+  border-radius: 3px;
+}
+.visa-pay {
+  margin: 0px 30px 30px 10px;
+}
+.mastercard-pay {
+  margin: 20px 40px 15px 0px;
+}
+.amex-pay {
+  width: 55px;
+  margin: 20px 5px 16px 0px;
+  padding: 2px;
+}
+.no-card-info {
+  background-color: rgb(249, 249, 249);
+  padding: 0px 10px;
+  padding-bottom: 0px;
+}
+.inputs-pay > p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.inputs-pay > input {
+  width: 93%;
+  background: white;
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 3px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+.inputs-two-pay {
+  display: flex;
+}
+.inputs-two-pay  p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.inputs-two-pay input {
+  max-width: 88px;
+  background: white;
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 3px;
+  padding: 5px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 15px;
+}
+.cvc-pay-container {
+  margin-left: 20px;
+}
+.save-card {
+  display: flex;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 3px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.save-card-account {
+  border: 2px solid red;
+}
+.save-card > input {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.visa-card-pay {
+  color: rgb(155, 155, 155);
+}
+.cards-pay button {
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  background:  rgb(141, 122, 255);
+  border: 0px solid white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
+}
+.cards-pay > span {
+  color: rgb(155, 155, 155);
+  font-size: 13px;
+  margin-left: 20px;
+}
+.inputs-pay > p {
+  font-size: 13px;
+}
+p.code-homiemc {
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(155, 155, 155);
+  text-align: center;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
+  height: 16px;
+  width: 16px;
+  border: 2px solid rgb(141, 122, 255);
+  border-radius: 2px;
+}
+input[type="checkbox"]:checked {
+  background: rgb(141, 122, 255);
+}
+input[type="checkbox"]:after {
+  content: '';
+  position: relative;
+  left: 40%;
+  top: 20%;
+  width: 15%;
+  height: 40%;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+.save-card > span{
+  margin-top: 2px;
+}

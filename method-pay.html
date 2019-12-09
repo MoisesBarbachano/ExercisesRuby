@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Method Pay</title>
+    <link rel="stylesheet" href="method_pay.css">
+  </head>
+  <body>
+    <div class="principal-container">
+      <div class="flex-container">
+        <p class="choose-pay">Elige tu forma de pago</p>
+      </div>
+      <div class="principal-container card-container">
+        <div class="card-pay">
+          <img src="images/checkbox_pay.png">
+          <span class="type-pay">Tarjeta de crédito o débito</span>
+        </div>
+        <div class="images-pay-container">
+          <img class="image-pay visa-pay" onclick="openVisaInfo()" src="images/visa_pay.png">
+          <img class="image-pay mastercard-pay" onclick="openMastercardInfo()" src="images/mastercard_pay.png">
+          <img class="image-pay amex-pay" onclick="openAmexInfo()" src="images/amex_pay.png">
+        </div>
+        <div class="no-card-info">
+          <div class="inputs-pay">
+            <p>Nombre completo</p>
+            <input type="text" placeholder="Nombre">
+          </div>
+          <div class="inputs-two-pay">
+            <div>
+              <p>Vigencia</p>
+              <input type="text" placeholder="mm/aa">
+            </div>
+            <div class="cvc-pay-container">
+              <p>CVC</p>
+              <input type="text" placeholder="___">
+            </div>
+          </div>
+          <div class="inputs-pay">
+            <p>Número de tarjeta</p>
+            <input type="text" placeholder="___________________">
+          </div>
+          <div class="inputs-pay">
+            <p>Código postal</p>
+            <input type="text" placeholder="______">
+          </div>
+          <div class="cards-pay js-mastercard-info" hidden>
+            <div class="inputs-pay">
+              <p>Tienes un código MasterCard? escríbelo aquí</p>
+              <input type="text">
+              <p class="code-homiemc">Utiliza el código HOMIEMC al pagar con tu tarjeta MASTERCARD y recibe beneficios
+                exclusivos.</p>
+            </div>
+          </div>
+          <div class="save-card">
+            <input class="save-card-account" type="checkbox">
+            <span>Guardar tarjeta en cuenta</span>
+          </div>
+          <div class="cards-pay js-visa-info" hidden>
+            <button>
+              <span>Pagar</span>
+            </button>
+            <span>* Se cobrará el 2.65% por comisión</span>
+          </div>
+          <div class="cards-pay js-mastercard-info" hidden>
+            <button>
+              <span>Pagar</span>
+            </button>
+            <span>* Se cobrará el 2.65% por comisión</span>
+          </div>
+          <div class="cards-pay js-amex-info" hidden>
+            <button>
+              <span>Pagar</span>
+            </button>
+            <span>* Se cobrará el 3.65% por comisión</span>
+          </div>
+        </div>
+        <div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="methodPay.js"></script>
+  </body>
+</html>
