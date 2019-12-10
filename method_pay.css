@@ -39,13 +39,13 @@ body {
   border: 2px solid gray;
   border-radius: 3px;
 }
-.visa-pay {
+.js-visa-pay {
   margin: 0px 30px 30px 10px;
 }
-.mastercard-pay {
+.js-mastercard-pay {
   margin: 20px 40px 15px 0px;
 }
-.amex-pay {
+.js-amex-pay {
   width: 55px;
   margin: 20px 5px 16px 0px;
   padding: 2px;
@@ -54,6 +54,7 @@ body {
   background-color: rgb(249, 249, 249);
   padding: 0px 10px;
   padding-bottom: 0px;
+  margin-bottom: 18px;
 }
 .inputs-pay > p {
   margin-bottom: 0px;
