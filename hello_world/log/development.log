@@ -1,0 +1,41 @@
+Started GET "/" for 127.0.0.1 at 2019-12-12 09:41:46 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/homietrainee/.rvm/gems/ruby-2.5.1/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/homietrainee/.rvm/gems/ruby-2.5.1/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 129ms (Views: 4.9ms)
+
+
+Started GET "/hello_world" for 127.0.0.1 at 2019-12-12 09:41:49 -0600
+Processing by HelloWorldController#index as HTML
+  Rendering hello_world/index.html.erb within layouts/application
+  Rendered hello_world/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 459ms (Views: 457.5ms)
+
+
+Started GET "/hello_world" for 127.0.0.1 at 2019-12-12 09:42:43 -0600
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/hello_world" for 127.0.0.1 at 2019-12-12 09:42:46 -0600
+Processing by HelloWorldController#index as HTML
+  Rendering hello_world/index.html.erb within layouts/application
+  Rendered hello_world/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 36.5ms)
+
+
+Started GET "/hello_world" for 127.0.0.1 at 2019-12-12 10:40:44 -0600
+Processing by HelloWorldController#index as HTML
+  Rendering hello_world/index.html.erb within layouts/application
+  Rendered hello_world/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.3ms)
+
+
+Started GET "/hello_world" for 127.0.0.1 at 2019-12-12 10:42:50 -0600
+Processing by HelloWorldController#index as HTML
+  Rendering hello_world/index.html.erb within layouts/application
+  Rendered hello_world/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms)
+
+
