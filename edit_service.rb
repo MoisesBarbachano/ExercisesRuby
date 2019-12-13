@@ -85,7 +85,7 @@ def check_update_service(activity, technician, status, service)
   service.technician = technician if technician
   service.status = status if status
 
-  generate_Logs(activity, technician, status)
+  generate_logs(activity, technician, status)
 
   service.save
 end
