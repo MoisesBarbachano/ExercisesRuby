@@ -18,11 +18,11 @@ $desktop-size: 750px;
   border: solid 1px #E4E1D3;
   width: 340px;
 }
-@mixin without_margins {
+@mixin without-margins {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-@mixin without_side_margins {
+@mixin without-side-margins {
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -41,25 +41,33 @@ body {
     margin: 14px 0px 0px 15px;
   }
   .logo-principal-image {
+    img {
+      width: 90px;
+      height: 38px;
+    }
     margin: 2px 0px 0px 10px;
   }
   .profile-principal-image {
     margin: 8px 35px 0px 0px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
-.details-report{
+.details-report {
   margin-top: 10px;
-  div{
+  div {
     @include flex-column;
     margin: 4px auto;
   }
   .desktop-columns {
-    @include without_margins;
+    @include without-margins;
     .score-profile-info {
-      @include without_margins;
+      @include without-margins;
     }
     .description-profile-info {
-      @include without_margins;
+      @include without-margins;
     }
   }
   .info-report {
@@ -70,6 +78,10 @@ body {
     }
     .homie-container {
       margin: 0px;
+      img {
+        width: 70px;
+        height: 70px;
+      }
     }
     .text-info-report {
       h3 {
@@ -117,6 +129,10 @@ body {
         flex-direction: row;
         font-weight: bold;
       }
+      img {
+        width: 200px;
+        height: 10px;
+      }
       .level-categories {
         @include flex-row-centered;
         font-size: 10px;
@@ -158,6 +174,8 @@ body {
     @include flex-row-centered;
     margin-top: 10px;
     .profile-image {
+      width: 50px;
+      height: 50px;
       margin: auto 32px auto 16px;
     }
     .profile-name {
@@ -179,6 +197,10 @@ body {
       flex-direction: row;
       justify-content: left;
       margin: 10px 0px 10px 30px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
       span {
         margin: 4px 18px;
       }
@@ -193,6 +215,8 @@ body {
     }
     img {
       margin: 0px auto 34px auto;
+      width: 130px;
+      height: 32px;
     }
   }
   .button-save {
@@ -205,7 +229,7 @@ body {
   }
 }
 @media(min-width: $desktop-size) {
-  .navbar-principal{
+  .navbar-principal {
     display: none;
   }
   .details-report {
@@ -287,7 +311,7 @@ body {
         margin-left: 5px;
         min-width: 400px;
         .profile-info-title {
-          @include without_side_margins;
+          @include without-side-margins;
           min-width: 410px;
           flex-direction: column;
           text-align: center;
@@ -301,6 +325,8 @@ body {
           }
           .profile-image {
             margin: auto;
+            width: 90px;
+            height: 90px;
             img {
               width: 90px;
               height: 90px;
@@ -312,7 +338,7 @@ body {
           }
         }
         .profile-info {
-          @include without_side_margins;
+          @include without-side-margins;
           padding-top: 20px;
           min-width: 410px;
           div {
