@@ -201,6 +201,12 @@ body {
         width: 20px;
         height: 20px;
       }
+      .people-icon {
+        margin-top: 25px;
+      }
+      .people-icon-two {
+        margin-top: 20px;
+      }
       span {
         margin: 4px 18px;
       }
@@ -222,9 +228,12 @@ body {
   .button-save {
     margin-top: 6px;
     margin-left: 10px;
-    max-width: 90px;
+    max-width: 100px;
     button {
-      padding: 0px;
+      background: white;
+      border: solid 1px #E4E1D3;
+      border-radius: 5px;
+      padding: 8px;
     }
   }
 }
@@ -372,7 +381,11 @@ body {
       }
     }
     .button-save {
-      margin-left: 100px;
+      margin-left: 270px;
+      button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
     }
   }
 }
