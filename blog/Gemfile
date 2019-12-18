@@ -47,7 +47,8 @@ group :test do
   gem 'webdrivers'
 
   gem 'factory_bot'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~>4.0.0.beta3'
+  gem 'rails-controller-testing'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
 end
