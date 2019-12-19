@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'mongoid'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -46,8 +47,10 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 
-  gem 'factory_bot'
-  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '>= 3.9'
+  gem 'ffaker'
+  gem 'mongoid-rspec'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
 end
