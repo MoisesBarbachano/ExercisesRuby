@@ -49,7 +49,8 @@ RSpec.describe Owner, type: :model do
 
     it "when CURP is greather or less of 18 of length" do
       length_curp = 18
-      owner.curp = owner.curp + owner.curp
+      
+      owner.curp = "invalid_curp"
 
       expect(owner.curp.length).to_not equal(length_curp)
     end

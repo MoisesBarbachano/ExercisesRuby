@@ -64,7 +64,7 @@ RSpec.describe UsersController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       it "updates the requested user" do
-        user.name = user.name + user.name
+        user.name = "name_changed"
         put :update, params: {id: user.to_param, user: user.attributes}
         user.reload
 
