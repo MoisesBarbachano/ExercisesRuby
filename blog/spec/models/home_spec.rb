@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Home, type: :model do
-  let!(:home) { create(:home) }
+  let(:home) { build(:home) }
 
   context 'when valid' do
     it { is_expected.to be_mongoid_document }
@@ -18,18 +18,12 @@ RSpec.describe Home, type: :model do
   context 'when not valid' do
     it 'when price is nil' do
       home.price = nil
-
+      
       expect(home).to_not be_valid
     end
 
     it 'when extra service is nil' do
       home.extra_service = nil
-
-      expect(home).to_not be_valid
-    end
-
-    it 'when total amount is nil' do
-      home.total_amount = nil
 
       expect(home).to_not be_valid
     end
@@ -60,6 +54,7 @@ RSpec.describe Home, type: :model do
     end
 
     it 'when total_amount is valid' do
+      home.save
       home_total = home.total_amount
       home_price = home.price
       home_service = home.extra_service
@@ -68,9 +63,13 @@ RSpec.describe Home, type: :model do
     end
 
     it 'when total_amount not valid' do
-      home.total_amount = FFaker::Name.first_name
+      home.save
+      random_number = Faker::Number.decimal(l_digits: 2, r_digits: 2)
+      home_total = home.total_amount + random_number
+      home_price = home.price
+      home_service = home.extra_service
       
-      expect(home).to_not be_valid
+      expect(home_total).to_not eq(home_price + home_service)
     end
   end
 

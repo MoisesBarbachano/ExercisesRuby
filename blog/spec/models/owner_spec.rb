@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Owner, type: :model do
-  let!(:owner) { create(:owner) }
+  let(:owner) { build(:owner) }
 
   context 'when valid' do
     it { is_expected.to be_mongoid_document }
