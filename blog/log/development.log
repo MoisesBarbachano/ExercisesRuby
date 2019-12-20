@@ -1,0 +1,222 @@
+Started GET "/" for 127.0.0.1 at 2019-12-20 02:45:36 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/moisesbarbachanochiu/.rvm/gems/ruby-2.5.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/moisesbarbachanochiu/.rvm/gems/ruby-2.5.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 24.9ms | Allocations: 443)
+Completed 200 OK in 52ms (Views: 38.6ms | MongoDB: 0.0ms | Allocations: 2473)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-12-20 02:45:38 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47266768138280 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47266767562660 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-12-20 08:45:38 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001092456>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47266767638180 type=uuid data=0xfc1332bac98a425b...>}}
+MONGODB | [7] localhost:27017 | blog_development.find | SUCCEEDED | 0.023s
+  Rendered users/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 4505)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+ERROR: [Errno 21] Is a directory: 'bin'
+CRITICAL:root:Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python2.7/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python2.7/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.readfp(f)
+  File "/usr/lib/python2.7/ConfigParser.py", line 324, in readfp
+    self._read(fp, filename)
+  File "/usr/lib/python2.7/ConfigParser.py", line 512, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+MissingSectionHeaderError: File contains no section headers.
+file: /home/moisesbarbachanochiu/Documents/Homie/ExercisesRuby/blog/config/webpack/development.js, line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/cliapp/app.py", line 182, in _run
+    self.settings.load_configs()
+  File "/usr/lib/python2.7/dist-packages/cliapp/settings.py", line 829, in load_configs
+    self._read_ini(pathname, f)
+  File "/usr/lib/python2.7/dist-packages/cliapp/settings.py", line 838, in _read_ini
+    cp.readfp(f)
+  File "/usr/lib/python2.7/ConfigParser.py", line 324, in readfp
+    self._read(fp, filename)
+  File "/usr/lib/python2.7/ConfigParser.py", line 512, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+MissingSectionHeaderError: File contains no section headers.
+file: /home/moisesbarbachanochiu/Documents/Homie/ExercisesRuby/blog/config/webpack/development.js, line: 1
+"process.env.NODE_ENV = process.env.NODE_ENV || 'development'\n"
+
+Completed 500 Internal Server Error in 845ms (MongoDB: 0.0ms | Allocations: 43287)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/moisesbarbachanochiu/Documents/Homie/ExercisesRuby/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47266767638180 type=uuid data=0xfc1332bac98a425b...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/users" for 127.0.0.1 at 2019-12-20 02:47:41 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47027009117460 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47027009056820 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-12-20 08:47:41 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001246594>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47027009020680 type=uuid data=0x93953443fcee4941...>}}
+MONGODB | [7] localhost:27017 | blog_development.find | SUCCEEDED | 0.000s
+  Rendered users/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4754)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.21.1
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1954ms (MongoDB: 0.0ms | Allocations: 23987)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/moisesbarbachanochiu/Documents/Homie/ExercisesRuby/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47027009020680 type=uuid data=0x93953443fcee4941...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/users" for 127.0.0.1 at 2019-12-20 02:48:41 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47125724702040 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47125724685380 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-12-20 08:48:41 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001194689>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}}
+MONGODB | [7] localhost:27017 | blog_development.find | SUCCEEDED | 0.000s
+  Rendered users/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4755)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/moisesbarbachanochiu/Documents/Homie/ExercisesRuby/blog/public/packs
+[Webpacker] Hash: d010700f5689af4f034c
+Version: webpack 4.41.4
+Time: 931ms
+Built at: 12/20/2019 2:48:44 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-79133a55ac0e8080e7c9.js   89.1 KiB  application  [emitted] [immutable]  application
+js/application-79133a55ac0e8080e7c9.js.map   97.8 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-79133a55ac0e8080e7c9.js js/application-79133a55ac0e8080e7c9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 707 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2 hidden modules
+
+Completed 200 OK in 2724ms (Views: 2715.3ms | MongoDB: 0.0ms | Allocations: 22976)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-12-20 02:48:47 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 194.1ms | Allocations: 9784)
+  Rendered users/new.html.erb within layouts/application (Duration: 196.7ms | Allocations: 10147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 207ms (Views: 203.9ms | MongoDB: 0.0ms | Allocations: 13904)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-12-20 02:49:03 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"JYZqMUtocoumR2LgFXiFQgimGyC+nefqtrrq0/q1rI7BJRbxw+Ji3iv7eVUNDXXmbhhGzmhR0/mdcTd7G8D6YA==", "user"=>{"email"=>"mbarbachano@gmail.com", "name"=>"Moises", "last_name"=>"Barbachano", "mobile_phone"=>"9991058361", "work_place"=>"Homie"}, "commit"=>"Create User"}
+MONGODB | [8] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{"email"=>"mbarbachano@gmail.com"}, "projection"=>{"_id"=>1}, "limit"=>1, "lsid"=>{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}}
+MONGODB | [8] localhost:27017 | blog_development.find | SUCCEEDED | 0.001s
+MONGODB | [9] localhost:27017 #1 | blog_development.insert | STARTED | {"insert"=>"users", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5dfc8aff63ffa0195de3fabb'), "email"=>"mbarbachano@gmail.com", "name"=>"Moises", "last_name"=>"Barbachano", "mobile_phone"=>"9991058361", "work_place"=>"Homie"}], "lsid"=>{"id"=...
+MONGODB | [9] localhost:27017 | blog_development.insert | SUCCEEDED | 0.245s
+Redirected to http://localhost:3000/users/5dfc8aff63ffa0195de3fabb
+Completed 302 Found in 268ms (MongoDB: 0.2ms | Allocations: 7850)
+
+
+Started GET "/users/5dfc8aff63ffa0195de3fabb" for 127.0.0.1 at 2019-12-20 02:49:03 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5dfc8aff63ffa0195de3fabb"}
+MONGODB | [10] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{"_id"=>BSON::ObjectId('5dfc8aff63ffa0195de3fabb')}, "lsid"=>{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}}
+MONGODB | [10] localhost:27017 | blog_development.find | SUCCEEDED | 0.001s
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 372)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 15.4ms | MongoDB: 0.0ms | Allocations: 5503)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-12-20 02:49:05 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+MONGODB | [11] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}}
+MONGODB | [11] localhost:27017 | blog_development.find | SUCCEEDED | 0.038s
+  Rendered users/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 1746)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 47.4ms | MongoDB: 0.0ms | Allocations: 5262)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-12-20 02:49:07 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+MONGODB | [12] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}}
+MONGODB | [12] localhost:27017 | blog_development.find | SUCCEEDED | 0.000s
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.9ms | MongoDB: 0.0ms | Allocations: 5245)
+
+
+MONGODB | [13] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}]}
+MONGODB | [13] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
