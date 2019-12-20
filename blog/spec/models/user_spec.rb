@@ -10,6 +10,7 @@ RSpec.describe User, type: :model do
 
     it 'when save is successful' do
       saved_user = user.save
+
       expect(saved_user).to eq(true)
     end
   end
@@ -17,44 +18,56 @@ RSpec.describe User, type: :model do
   context 'when not valid' do
     it 'when name is nil' do
       user.name = nil
+
       expect(user).to_not be_valid
     end
 
     it 'when last name is nil' do
       user.last_name = nil
+
       expect(user).to_not be_valid
     end
 
     it 'when email is nil' do
       user.email = nil
+
       expect(user).to_not be_valid
     end
 
     it 'when mobile phone is nil' do
       user.mobile_phone = nil
+
       expect(user).to_not be_valid
     end
 
     it 'when work place is nil' do
       user.work_place = nil
+
       expect(user).to_not be_valid
     end
 
     it 'when save is not successful' do
+      user.name = nil
       saved_user = user.save
+
       expect(saved_user).to eq(false)
     end
   end
 
+  context "Validations" do
+    it { should validate_presence_of :name }
+    it { should validate_presence_of :last_name }
+    it { should validate_presence_of :email }
+    it { should validate_presence_of :mobile_phone }
+    it { should validate_presence_of :work_place }
 
-
-  describe "Validations" do
     it "when phone is valid" do
-      expect(user).to match( /\d[0-9]\)*\z/)
+      expect(user.mobile_phone).to match(/\d[0-9]\)*\z/ )
     end
 
     it "when phone is invalid" do
       user.mobile_phone = FFaker::Name.first_name
+
       expect(user).to_not be_valid
     end
 
@@ -63,10 +76,9 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "Associations" do
+  context "Associations" do
     it 'Has many rents' do
       should have_many(:rents)
     end
   end
-
 end

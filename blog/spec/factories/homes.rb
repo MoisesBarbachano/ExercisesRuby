@@ -1,12 +1,13 @@
 FactoryBot.define do
   factory :home do
-    price { FFaker::String.from_regexp('[-+]?([0-9]*\.[0-9]+|[0-9]+)') }
-    extra_service { FFaker::String.from_regexp('[-+]?([0-9]*\.[0-9]+|[0-9]+)') }
-    total_amount { FFaker::String.from_regexp('[-+]?([0-9]*\.[0-9]+|[0-9]+)') }
+    owner { FactoryBot.create(:owner) } 
+    price { Faker::Number.decimal(l_digits: 3, r_digits: 3) }
+    extra_service { Faker::Number.decimal(l_digits: 3, r_digits: 3) }
+    total_amount { Faker::Number.decimal(l_digits: 3, r_digits: 3) }
     home_features do
-      {garden: FFaker::Boolean.random,
-       furnished: FFaker::Boolean.random,
-       gym: FFaker::Boolean.random
+      { garden: FFaker::Boolean.random,
+        furnished: FFaker::Boolean.random,
+        gym: FFaker::Boolean.random
       }
     end
   end
