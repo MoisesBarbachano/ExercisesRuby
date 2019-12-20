@@ -20,8 +20,16 @@ RSpec.configure do |config|
   config.before(:all)  { FFaker::Random.seed=config.seed }
   config.before(:each) { FFaker::Random.reset! }
 
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean_with(:truncation)
+  end
 
-
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
+  end
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
