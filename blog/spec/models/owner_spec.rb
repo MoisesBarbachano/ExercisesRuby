@@ -38,6 +38,7 @@ RSpec.describe Owner, type: :model do
 
   context "Validations" do
     it { should validate_presence_of :curp }
+    
     it { should validate_presence_of :registered_in_srpago }
 
     it "when CURP is 18 of length" do
@@ -48,7 +49,7 @@ RSpec.describe Owner, type: :model do
 
     it "when CURP is greather or less of 18 of length" do
       length_curp = 18
-      owner.curp = FFaker::IdentificationMX.rfc
+      owner.curp = owner.curp + owner.curp
 
       expect(owner.curp.length).to_not equal(length_curp)
     end

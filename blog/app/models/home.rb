@@ -1,5 +1,6 @@
 class Home
   include Mongoid::Document
+  include Mongoid::Enum
 
   before_validation :sum_total_amount
 
@@ -7,15 +8,16 @@ class Home
   field :extra_service, type: Float
   field :total_amount, type: Float
   field :home_features, type: Hash, default: { garden: false, furnished: false, gym: false }
+  enum :status, [:in_progress, :published, :rented]
+  
+  has_many :rents
+  belongs_to :owner
 
   validates_presence_of :price, :extra_service, :total_amount
   validates :price, numericality: true
   validates :extra_service, numericality: true
   validates :total_amount, numericality: true
   validate :valid_total_amount?
-  
-  has_many :rents
-  belongs_to :owner
 
   def sum_total_amount
     price_formated = price.to_f

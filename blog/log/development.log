@@ -220,3 +220,33 @@ Completed 200 OK in 9ms (Views: 8.9ms | MongoDB: 0.0ms | Allocations: 5245)
 
 MONGODB | [13] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70094940046280 type=uuid data=0x4db1a405bce34c82...>}]}
 MONGODB | [13] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/" for 127.0.0.1 at 2019-12-20 14:09:51 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/moisesbarbachanochiu/.rvm/gems/ruby-2.5.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/moisesbarbachanochiu/.rvm/gems/ruby-2.5.1/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.2ms | Allocations: 443)
+Completed 200 OK in 31ms (Views: 17.0ms | MongoDB: 0.0ms | Allocations: 2573)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-12-20 14:09:56 -0600
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47313226335420 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47313226181740 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2019-12-20 20:09:56 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.00117214>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | blog_development.find | STARTED | {"find"=>"users", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47313225962460 type=uuid data=0x4bccc8007f4d4923...>}}
+MONGODB | [7] localhost:27017 | blog_development.find | SUCCEEDED | 0.000s
+  Rendered users/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 36.2ms | MongoDB: 0.0ms | Allocations: 21506)
+
+
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47313225962460 type=uuid data=0x4bccc8007f4d4923...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
