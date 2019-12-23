@@ -41,6 +41,8 @@ RSpec.describe Owner, type: :model do
     
     it { should validate_presence_of :registered_in_srpago }
 
+    it { should validate_presence_of :user }
+
     it "when CURP is 18 of length" do
       length_curp = 18
 

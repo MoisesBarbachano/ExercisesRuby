@@ -25,7 +25,6 @@ namespace :generate_home do
       },
       _status: :published
     )
-
     Home.find_or_create_by!(
       owner: owner,
       price: 182.90,
