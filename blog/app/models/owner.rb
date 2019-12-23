@@ -7,6 +7,6 @@ class Owner
   has_many :homes
   belongs_to :user
   
-  validates_presence_of :curp, :registered_in_srpago
+  validates_presence_of :curp, :registered_in_srpago, :user
   validates :curp, length: { is: 18 }
 end
