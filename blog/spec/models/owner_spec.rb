@@ -5,9 +5,7 @@ RSpec.describe Owner, type: :model do
 
   context 'when valid' do
     it { is_expected.to be_mongoid_document }
-
     it { expect(owner).to be_valid }
-
     it 'when save is successful' do
       saved_owner = owner.save
 
@@ -21,13 +19,11 @@ RSpec.describe Owner, type: :model do
 
       expect(owner).to_not be_valid
     end
-
     it 'when registered in srpago is nil' do
       owner.registered_in_srpago = nil
 
       expect(owner).to_not be_valid
     end
-
     it 'when save is not successful' do
       owner.curp = nil
       saved_owner = owner.save
@@ -38,17 +34,13 @@ RSpec.describe Owner, type: :model do
 
   context "Validations" do
     it { should validate_presence_of :curp }
-
     it { should validate_presence_of :registered_in_srpago }
-
     it { should validate_presence_of :user }
-
     it "when CURP is 18 of length" do
       length_curp = 18
 
       expect(owner.curp.length).to equal(length_curp)
     end
-
     it "when CURP is greather or less of 18 of length" do
       length_curp = 18
 
@@ -62,7 +54,6 @@ RSpec.describe Owner, type: :model do
     it 'Has many homes' do
       should have_many(:homes)
     end
-
     it "Belong to user" do
       should belong_to(:user)
     end
