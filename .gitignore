@@ -1,5 +1,8 @@
+.gitignore
+.idea
 *.rbc
 *.log
+.log
 capybara-*.html
 .rspec
 /db/*.sqlite3

@@ -1,20 +1,19 @@
 namespace :generate_home do
   desc "Generate two homes"
   task generate_two: :environment do
-    user = User.create(
+    user = User.find_or_create_by(
       name: "Moises",
       last_name: "Chiu",
       email: "a1@gmail.com",
       mobile_phone: "9991058361",
       work_place: "Homie"
     )
-    owner = Owner.create(
+    owner = Owner.find_or_create_by(
       user: user,
       curp: "1234567891234567SS", 
       registered_in_srpago: true
     )
-    
-    Home.create(
+    Home.find_or_create_by!(
       owner: owner,
       price: 2100.29,
       extra_service: 900.10,
@@ -22,11 +21,10 @@ namespace :generate_home do
         garden: true,
         furnished: false,
         gym: true
-      },
-      status: :published
+      }
     )
 
-    Home.create(
+    Home.find_or_create_by!(
       owner: owner,
       price: 182.90,
       extra_service: 120.23,
@@ -34,8 +32,7 @@ namespace :generate_home do
         garden: false,
         furnished: false,
         gym: true
-      },
-      status: :rented
+      }
     )
   end
 end
