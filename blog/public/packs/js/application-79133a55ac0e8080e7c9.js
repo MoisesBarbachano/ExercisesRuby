@@ -1438,7 +1438,7 @@ Copyright © 2018 Basecamp, LLC
         }, t.prototype.hasAnchor = function (t) {
           return null != this.getElementForAnchor(t);
         }, t.prototype.isPreviewable = function () {
-          return "no-preview" !== this.getCacheControlValue();
+          return "no-previews" !== this.getCacheControlValue();
         }, t.prototype.isCacheable = function () {
           return "no-cache" !== this.getCacheControlValue();
         }, t.prototype.isVisitable = function () {
@@ -1656,7 +1656,7 @@ Copyright © 2018 Basecamp, LLC
           var r, n, o;
           return o = t.snapshot, r = t.error, n = t.isPreview, this.markAsPreview(n), null != o ? this.renderSnapshot(o, n, e) : this.renderError(r, e);
         }, t.prototype.markAsPreview = function (t) {
-          return t ? this.htmlElement.setAttribute("data-turbolinks-preview", "") : this.htmlElement.removeAttribute("data-turbolinks-preview");
+          return t ? this.htmlElement.setAttribute("data-turbolinks-previews", "") : this.htmlElement.removeAttribute("data-turbolinks-previews");
         }, t.prototype.renderSnapshot = function (t, r, n) {
           return e.SnapshotRenderer.render(this.delegate, n, this.getSnapshot(), e.Snapshot.wrap(t), r);
         }, t.prototype.renderError = function (t, r) {
