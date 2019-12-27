@@ -1,10 +1,24 @@
 import React from 'react';
-import Gallery from './components/Gallery';
+import styled from 'styled-components';
+import RepeatEvery from './components/RepeatEvery';
 import './App.css';
 
-function App() {
+const App = () => {
+  const PeriocityContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 420px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  `;
+
   return (
-    <Gallery/>
+    <PeriocityContainer>
+        <RepeatEvery/>
+    </PeriocityContainer>
   );
 }
 
