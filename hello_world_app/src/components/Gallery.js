@@ -4,6 +4,7 @@ import Image from './Image';
 
 const Gallery = () => {
   const imageUrls = useContext(ImagesContext);
+  
   return (
     <div>
       <Image url={ imageUrls.firstUrl }/>
