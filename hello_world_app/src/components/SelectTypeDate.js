@@ -11,7 +11,7 @@ const SelectTypeStyled = styled.select`
   border-radius: 2px;
   appearance: none;
   background-image: url(${arrow}),
-    linear-gradient(to bottom, #9aa0a6 0%,#9aa0a6 100%);
+    linear-gradient(to bottom, #e8e8e8 0%,#e8e8e8 100%);
   background-repeat: no-repeat, repeat;
   background-position: right .7em top 50%, 0 0;
   background-size: .65em auto, 100%;

@@ -8,8 +8,9 @@ const TextContainer = (props) => {
     height: 30px;
     width: ${props.size}px;
     margin-bottom: 10px;
-    background: #9aa0a6;
+    background: #e8e8e8;
     padding-left: 5px;
+    border-radius: 2px;
   `;
 
   return (

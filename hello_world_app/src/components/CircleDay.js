@@ -5,7 +5,7 @@ const CircleDay = (props) => {
   const [clicked, setClicked] = useState(false);
 
   const CircleContainer = styled.div`
-    background: ${clicked ? '#1a73e8' : '#9aa0a6'};
+    background: ${clicked ? '#1a73e8' : '#e8e8e8'};
     cursor: pointer;
     border-radius: 90px;
     height: 21px;

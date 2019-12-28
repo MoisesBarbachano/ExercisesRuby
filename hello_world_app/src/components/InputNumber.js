@@ -10,9 +10,9 @@ const InputNumber = () => {
     height: 28px;
     margin-top: 8px;
     margin-left: 8px;
-    background: #9aa0a6;
+    background: #e8e8e8;
     border: solid white 0px;
-    border-bottom: solid ${focused ? '#1a73e8' : '#9aa0a6'} 2px;
+    border-bottom: solid ${focused ? '#1a73e8' : '#e8e8e8'} 2px;
     color: black;
     padding-left: 15px;
   `;
