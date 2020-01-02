@@ -12,21 +12,22 @@ const articlesState = {
 };
 
 function articlesReducer(state = articlesState, action) {
-  switch (action.type) {
+  switch (action.type){
     case ADD_ARTICLE:
-      return [
-        ...state.articles,
-        {
-          id: 'fff',
-          title: action.title,
-          content: action.content
-        }
-      ];
+    return [
+      ...state,
+      {
+        id: 'fff',
+        title: action.title,
+        content: action.content
+      }
+    ];
     case EDIT_ARTICLE:
       return {
 
       };
     case INFO_ARTICLE:
+      console.log('asdasdasda');
       return {
         ...state,
         article: action.article

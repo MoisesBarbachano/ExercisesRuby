@@ -1,50 +1,46 @@
 import * as actionTypes from '../constants/actionTypes';
 import ArticlesApi from '../api/articlesApi';
 
-export const addArticle = (title, content) => {
-  return (dispatch) => {
-    return ArticlesApi.addArticle(title, content).then(article => {
-      return ArticlesApi.getArticles().then(articles => {
-        dispatch(successLoadArticles(articles));
-      })
-    }).catch(error => {
-      console.log('error', error)
-    });
-  }
+export function addArticle(title, content) {
+  return {
+    type: actionTypes.ADD_ARTICLE,
+    title: title,
+    content: content
+  };
 }
 
-export const editArticle = (id) => {
+export function editArticle(id) {
   return {
     type: actionTypes.EDIT_ARTICLE,
     id: id
   };
 }
 
-export const infoArticle = (id) => {
-  return (dispatch) => {
+export function infoArticle(id) {
+  return function (dispatch) {
     return ArticlesApi.getArticle(id).then(article => {
-      dispatch(successShowArticle(article))
-    })
+        dispatch(successShowArticle(article))
+      })
       .catch(error => console.log('error', error));
   }
 }
 
-export const successShowArticle = (article) => {
+export function successShowArticle(article){
   return {
     type: actionTypes.INFO_ARTICLE,
     article
   }
 }
 
-export const removeArticle = (id) => {
+export function removeArticle(id) {
   return {
     type: actionTypes.REMOVE_ARTICLE,
     id: id
   };
 }
 
-export const allArticles = () => {
-  return (dispatch) => {
+export function allArticles(){
+  return function(dispatch){
     return ArticlesApi.getArticles().then(articles => {
       dispatch(successLoadArticles(articles));
     }).catch(error => {
@@ -53,7 +49,7 @@ export const allArticles = () => {
   }
 }
 
-export const successLoadArticles = (articles) => {
+export function successLoadArticles(articles) {
   return {
     type: actionTypes.ALL_ARTICLES,
     articles

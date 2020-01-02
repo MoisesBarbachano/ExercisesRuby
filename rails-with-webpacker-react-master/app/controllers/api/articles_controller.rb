@@ -34,9 +34,9 @@ class Api::ArticlesController < ApplicationController
     @article.destroy
     head :no_content
   end
-
+  
   private
-  def article_params
-    params.require(:article).permit(:title, :content)
-  end
+    def article_params
+      params.require(:article).permit(:title, :content)
+    end
 end

@@ -17,8 +17,8 @@ const Button = Styled.button`
   }
 `;
 
-const Form = (props) => {
-  return (
+function Form(props) {
+  return(
     <div>
       <form onSubmit={props.settings.handleSubmit}>
         <div className="form-group">
