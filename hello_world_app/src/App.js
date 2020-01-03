@@ -1,10 +1,10 @@
 import React from 'react';
-import Gallery from './components/Gallery';
+import ChooseProperty from './components/ChooseProperty';
 import './App.css';
 
 function App() {
   return (
-    <Gallery/>
+    <ChooseProperty/>
   );
 }
 
