@@ -1,10 +1,10 @@
 import React from 'react';
-import ChooseProperty from './components/ChooseProperty';
+import Calendar from './components/Calendar';
 import './App.css';
 
 function App() {
   return (
-    <ChooseProperty/>
+    <Calendar/>
   );
 }
 
