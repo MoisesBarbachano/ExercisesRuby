@@ -8,6 +8,8 @@ class Home
   field :extra_service, type: Float
   field :total_amount, type: Float
   field :home_features, type: Hash, default: { garden: false, furnished: false, gym: false }
+  field :location, type: Array, default: [0.0, 0.0]
+  field :master_home_id, type: String
   enum :status, [:in_progress, :published, :rented]
   
   has_many :rents
