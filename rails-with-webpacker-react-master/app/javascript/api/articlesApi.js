@@ -1,8 +1,13 @@
 import axios from 'axios';
 
 class ArticlesApi {
-  static getArticles() {
-    return axios.get('api/articles')
+  static getArticles(page, quantityElements) {
+    return axios.get('api/articles', {
+      params: {
+        page: page,
+        quantityElements: quantityElements
+      }
+    })
       .then(response => {
         return response.data;
       })

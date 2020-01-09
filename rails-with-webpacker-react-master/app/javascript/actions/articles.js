@@ -43,19 +43,19 @@ export const removeArticle = (id) => {
   };
 }
 
-export const allArticles = () => {
+export const allArticles = (page, quantityElements) => {
   return (dispatch) => {
-    return ArticlesApi.getArticles().then(articles => {
-      dispatch(successLoadArticles(articles));
+    return ArticlesApi.getArticles(page, quantityElements).then(infoArticles => {
+      dispatch(successLoadArticles(infoArticles));
     }).catch(error => {
       console.log('error', error)
     });
   }
 }
 
-export const successLoadArticles = (articles) => {
+export const successLoadArticles = (infoArticles) => {
   return {
     type: actionTypes.ALL_ARTICLES,
-    articles
+    infoArticles
   };
 }
