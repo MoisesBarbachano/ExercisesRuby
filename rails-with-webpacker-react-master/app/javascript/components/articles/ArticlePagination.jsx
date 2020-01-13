@@ -9,7 +9,7 @@ const ArticlePagination = (props) => {
   `;
   
   const changePage = () => {
-    props.listArticles(props.number, props.elementsByPage);
+    props.listArticles(props.number, props.perPage);
   }
 
   return <ButtonStyled onClick={changePage}>{props.number} </ButtonStyled>
@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
   return {
     articles: state.articlesReducer.articles,
     pages : state.articlesReducer.pages,
-    elementsByPage : state.articlesReducer.elementsByPage,
+    perPage : state.articlesReducer.perPage,
     currentPage : state.articlesReducer.currentPage
   }
 }

@@ -10,7 +10,7 @@ const articlesState = {
   articles: [],
   article: {},
   pages: 0,
-  elementsByPage: 3,
+  perPage: 3, //constant
   currentPage: 1
 };
 
@@ -43,7 +43,7 @@ function articlesReducer(state = articlesState, action) {
         ...state,
         articles: action.infoArticles.articles,
         currentPage: action.infoArticles.current_page,
-        elementsByPage: action.infoArticles.elements_by_page,
+        perPage: action.infoArticles.elements_by_page, //perPage
         pages: action.infoArticles.pages
       }
     default:

@@ -3,19 +3,16 @@ class Api::ArticlesController < ApplicationController
 
   def index
     page = 1
-    elements_page = 10
-    client_page = params[:page]
-    client_elements = params[:quantityElements]
-
-    page = client_page if client_page
-    elements_page = client_elements if client_elements
-    @articles = Article.paginate(page: page, per_page: elements_page).order(created_at: :desc)
+    page = params[:page] if params[:page]
+    per_page = 10
+    per_page = params[:per_page] if params[:per_page]
+    @articles = Article.paginate(page: page, per_page: per_page).order(created_at: :desc)
 
     render json: {
       articles: @articles,
       current_page: @articles.current_page,
       pages: @articles.total_pages,
-      elements_by_page: elements_page
+      elements_by_page: per_page
     }
   end
 

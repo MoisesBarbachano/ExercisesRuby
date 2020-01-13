@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 class ArticlesApi {
-  static getArticles(page, quantityElements) {
+  static getArticles(page = null, perPage = null) {
     return axios.get('api/articles', {
       params: {
         page: page,
-        quantityElements: quantityElements
+        quantityElements: perPage
       }
     })
       .then(response => {

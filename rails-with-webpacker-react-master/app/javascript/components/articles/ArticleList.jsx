@@ -6,13 +6,13 @@ import ArticlePagination from './ArticlePagination';
 
 const ArticleList = (props) => {
   useEffect(() => {
-    props.listArticles(props.currentPage, props.elementsByPage);
+    props.listArticles(props.currentPage, props.perPage);
   }, [])  
 
   const checkPages = () => {
     const plusToPage = 1;
 
-    let clientPage = 0;
+    let clientPage = 0; //currentPage
     let pagination = [];
     let pages = [...Array(props.pages).keys()];
     
@@ -41,7 +41,7 @@ const ArticleList = (props) => {
         })
       }
       {
-        checkPages()
+        checkPages() //initializePagination
       }
       <hr/>
       <button className="btn btn-outline-primary"><Link to={`/articles/new`}>New</Link></button>
@@ -53,7 +53,7 @@ const mapStateToProps = (state) => {
   return {
     articles: state.articlesReducer.articles,
     pages : state.articlesReducer.pages,
-    elementsByPage : state.articlesReducer.elementsByPage,
+    perPage : state.articlesReducer.perPage, //perPage
     currentPage : state.articlesReducer.currentPage
   }
 }
@@ -61,7 +61,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addArticle: (title, content) => dispatch(addArticle(title, content)),
-    listArticles: (page, quantityElements) => dispatch(allArticles(page, quantityElements))
+    listArticles: (page, quantityElements) => dispatch(allArticles(page, quantityElements)) //perPage
   }
 }
 
