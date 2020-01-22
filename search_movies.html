@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+  </head>
+  <body>
+    <input type="text" class="js-name-searched">
+    <button class="js-search-movie" onclick="searchMovie()">Buscar</button>
+    <div class="js-information-movie" hidden>
+      <h2>Movie Information</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Movie Name</th>
+            <th>Year</th>
+            <th>Actors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="js-movie-name"></td>
+            <td class="js-movie-year"></td>
+            <td class="js-movie-actors"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="js-movie-not-founded" hidden>
+      <p>No results found</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="search_movies.js"></script>
+  </body>
+</html>
