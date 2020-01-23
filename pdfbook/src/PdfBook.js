@@ -13,11 +13,11 @@ const CoverUpPage = styled.div`
 const PdfBook = () => {
   return (
     <div>
+      <CenterBook/>
       <CoverUpPage>
         <LeftSide/>
         <RightSide/>
       </CoverUpPage>
-      <CenterBook/>
       <BottomSide/>
     </div>
   );
