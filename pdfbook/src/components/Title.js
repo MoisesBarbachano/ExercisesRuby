@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledTitle = styled.div`
@@ -8,7 +8,7 @@ const StyledTitle = styled.div`
   width: 200px;
   height: 35px;
   padding-top: 12px;
-  margin: 10px auto;
+  margin-top: 10px;
   background: rgb(0,0,0,.5);
   border-radius: 5px;
 `;

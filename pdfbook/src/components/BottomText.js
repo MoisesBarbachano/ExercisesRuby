@@ -6,7 +6,7 @@ const StyledText = styled.div`
   color: black;
   width: 450px;
   padding-top: 135px;
-  margin: 10px auto;
+  margin: 15px auto;
   font-size: 16px;
   text-align: justify;
 `;

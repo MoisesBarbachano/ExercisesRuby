@@ -22,12 +22,21 @@ const StyledImage = styled.img`
   top: 240px;
 `;
 
+const WaterMark = styled.span`
+  position: absolute;
+  top: 545px;
+  left: 200px;
+  z-index: 3;
+  font-size: 23px;
+  color: white;
+`;
+
 const CenterBook = () => {
   return (
     <Fragment>
-      <CenterContainer>
-      </CenterContainer>
+      <CenterContainer/>
       <StyledImage src="/book.png"/>
+      <WaterMark>patronesdediseño.com</WaterMark>
     </Fragment>
   );
 }

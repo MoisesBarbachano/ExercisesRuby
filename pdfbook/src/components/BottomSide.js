@@ -5,10 +5,10 @@ import SubTitle from './SubTitle';
 import Title from './Title';
 
 const BottomContainer = styled.div`
-  background: #e3a252;
-  margin-top: -120px;
   height: 400px;
   width: 600px;
+  margin-top: -120px;
+  background: #e3a252;
   clip-path: polygon(593px 144px, 593px 495px, 3px 498px, 4px 154px, 332px 23px);
 `;
 
@@ -20,12 +20,14 @@ const SubtitlesContainer = styled.div`
 
 const FooterContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 const StyledImage = styled.img`
-  width: 220px;
+  width: 180px;
   padding-right: 20px;
   margin-top: -5px;
 `;
