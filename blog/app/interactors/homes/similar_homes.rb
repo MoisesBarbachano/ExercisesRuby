@@ -1,10 +1,13 @@
-class SimilarHome
+class Homes::SimilarHomes
+  include Interactor
+
   PRICE_POSITION = 0
   LOCATION_POSITION = 1
   JUST_ONE = 1
   REPEATED_STATUS = 'published'
 
-  def self.department_ids
+  def call
+    context.similar_homes_ids = []
     owners_id = Owner.pluck(:id)
 
     owners_id.each do |owner_id|
@@ -19,7 +22,7 @@ class SimilarHome
     end
   end
 
-  def self.homes_values(owner_id, same_values)
+  def homes_values(owner_id, same_values)
     homes_repeated = Home.where(
       owner_id: owner_id,
       _status: REPEATED_STATUS,
@@ -32,6 +35,7 @@ class SimilarHome
       owner = home.owner
       owner_complete_name = "#{owner.user.name} #{owner.user.last_name}"
       puts "#{owner_complete_name},#{owner.user.email},#{home.id},#{home.total_amount},#{home.status},#{home.location}"
+      context.similar_homes_ids << home.id
     end
   end
 end
