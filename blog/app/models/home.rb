@@ -4,6 +4,7 @@ class Home
 
   before_validation :sum_total_amount
 
+  field :title, type: String
   field :price, type: Float
   field :extra_service, type: Float
   field :total_amount, type: Float
@@ -11,9 +12,6 @@ class Home
   field :location, type: Array, default: [0.0, 0.0]
   field :master_home_id, type: String
   enum :status, [:in_progress, :published, :rented]
-  
-  has_many :rents
-  belongs_to :owner
 
   validates_presence_of :price, :extra_service, :total_amount
   validates :price, numericality: true
